@@ -306,12 +306,14 @@ keyframes{
     margin: 0;
     padding: 0;
     color: #4c4d5e;
+    font-size: 18px;
 }
 .circle-profile p{
     font-family: "Montserrat", Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     color: #4c4d5e;
+    font-size: 12px;
 }
 
 .tooltip-transition + .circle-profile{

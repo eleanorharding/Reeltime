@@ -4,6 +4,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="../css/style.css" />
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="../video/css/main.css">
 
 		<style>#hoop-iframe-wrap {width: 100%;margin: 0 auto;padding: 0;position: relative;}#hoop-iframe-wrap iframe{max-width: 100%;border:none;background-color: transparent;}</style>
 
@@ -18,6 +19,74 @@
 		<div id="subheader" class="friendsBG">
 
 		</div>
+
+		<div id="commentContent">
+			<div class="headline">
+				<div class="head-container clearfix">
+					<img src="../img/Untitled-7.png" alt="">
+					<div class="headline-title">
+						<h2>Matt</h2>
+						<h3>01:47</h3>
+					</div>
+				</div>
+				<div class="comment">'Love this show!'</div>
+			</div>
+
+			<div class="headline">
+				<div class="head-container clearfix">
+					<img src="../img/Untitled-5.png" alt="">
+					<div class="headline-title">
+						<h2>Eleanor</h2>
+						<h3>02:42</h3>
+					</div>
+				</div>
+				<div class="comment">'OMG'</div>
+			</div>
+
+			<div class="headline">
+				<div class="head-container clearfix">
+					<img src="../img/Untitled-14.png" alt="">
+					<div class="headline-title">
+						<h2>Archie</h2>
+						<h3>02:52</h3>
+					</div>
+				</div>
+				<div class="comment">'What!? I didn't expect that.</div>
+			</div>
+
+			<div class="headline">
+				<div class="head-container clearfix">
+					<img src="../img/Untitled-11.png" alt="">
+					<div class="headline-title">
+						<h2>Orfy</h2>
+						<h3>03:12</h3>
+					</div>
+				</div>
+				<div class="comment">'This is the best episode in the season'</div>
+			</div>
+
+			<div class="headline">
+				<div class="head-container clearfix">
+					<img src="../img/Untitled-3.png" alt="">
+					<div class="headline-title">
+						<h2>Darren</h2>
+						<h3>05:27</h3>
+					</div>
+				</div>
+				<div class="comment">'Hahaha!'</div>
+			</div>
+			<div class="headline">
+				<div class="head-container clearfix">
+					<img src="../img/Untitled-7.png" alt="">
+					<div class="headline-title">
+						<h2>Max</h2>
+						<h3>06:34</h3>
+					</div>
+				</div>
+				<div class="comment">'Loving this!'</div>
+			</div>
+		</div>
+
 		
 		<div id="feedContent" class="visible">
 			<img src="../img/dot.png" id="dot">
@@ -112,7 +181,8 @@
 
 				$("#subheader").click(function(){
 				    $("#subheader").toggleClass('publicBG');
-				    $("#feedContent").toggleClass('visible')
+				    $("#feedContent").toggleClass('visible');
+				    $("#commentContent").toggleClass('visible');
 				});
 
 

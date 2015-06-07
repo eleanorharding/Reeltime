@@ -14,7 +14,7 @@ $(function() {
         
         var nodes = '<div class="custom-node">';
         var i = 0;
-        $.getJSON("http://127.0.0.1:54777/Reeltime/video/js/data.json", function(data) {
+        $.getJSON("http://localhost/reeltime/Reeltime/video/js/data.json", function(data) {
             console.log("success");
             $.each(data, function(key, val){
                 var posLeft = parseFloat(val.time) * videoWidth;
