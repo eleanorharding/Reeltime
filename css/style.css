@@ -158,9 +158,10 @@ a {
 
 #overlay {
 	width: 100%;
-	height: 100%;
+	height: 200%;
 	background-color: rgba(0,0,0,0.87);
 	position: absolute;
+	z-index: 1000;
 
 }
 
@@ -304,18 +305,42 @@ div.publicBG {
 #gifIt {
 	float: right;
 	cursor: pointer;
-	z-index: 0;
-
+	z-index: 1001;
+	top: 900px;
+  	position: absolute;
+  	right: 0;
 }
 
 #gifIt:hover {
 	opacity: 1;
-	
-
 }
 
-.left {
+#gifIt.left {
 	right: 850px;
-	position: absolute;
 	top: 0px;
 }
+
+#headerbackgroundimage {
+	background-image: url("../img/header.png");
+	min-height: 180px;
+	background-repeat: no-repeat;
+}
+
+#gifVid {
+	width: 550px;
+	margin-bottom: 20px;
+}
+
+
+/*@media (max-width:1500px) {
+	#headerbackgroundimage {
+		background-image: url("../img/header2.png");
+	}
+	#videoBannerContainer {
+		height: 286px;
+	}
+	#videoBannerContainer video {
+		height: 100%;
+	}
+
+}*/
