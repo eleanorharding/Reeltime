@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css'>
+
+		<style>#hoop-iframe-wrap {width: 100%;margin: 0 auto;padding: 0;position: relative;}#hoop-iframe-wrap iframe{max-width: 100%;border:none;background-color: transparent;}</style>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script> 
+
+	</head>
+
+	<body>
+		<div id="overlay" class="visible">
+			<div>
+				<h3> Share Your GIF </h3>
+				<div>
+					<div id="hoop-iframe-wrap">
+					  <iframe scrolling="0" src="http://www.hooplr.co/hoops/ex-machina/embed" height="345" width="550"></iframe>
+					</div>
+				</div>
+				<div><a href="https://twitter.com/login?redirect_after_login=%2Fhome%3Fstatus%3DAwesome%2520moment%2520in%2520the%2520new%2520Jurassic%2520World%2520movie%2520%2523Run%2520http%3A%2F%2Fmedia.giphy.com%2Fmedia%2FqC585szoQ7r7q%2Fgiphy.gif" id="sharelink" target="_blank" onclick="toggle()"> Share to Twitter</a></div>
+
+
+			</div>
+		</div>
+		<video>
+
+		</video>
+		<!-- <div href="#" id="button"  onclick="toggle()">GIF it</div> -->
+		<img src="../img/gif-it.png" id="gifIt" onclick="toggle()">
+		<footer>
+			<img src="../img/footer.png"/>
+		</footer>
+
+
+
+		<script type="text/javascript">
+
+
+				function toggle() {
+					$("#overlay").toggleClass('visible');
+					$("#gifIt").toggleClass('left');
+				}
+
+				$("#overlay").click(function(){
+				    $("#overlay").toggleClass('visible');
+				});
+
+
+		</script>
+	</body>
+</html>
