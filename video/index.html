@@ -8,7 +8,86 @@
 		<style>#hoop-iframe-wrap {width: 100%;margin: 0 auto;padding: 0;position: relative;}#hoop-iframe-wrap iframe{max-width: 100%;border:none;background-color: transparent;}</style>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script> 
+        
+        
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/video-js.css">
+    <!--<link rel="stylesheet" href="css/font-awesome.min.css">-->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/responsive.css">
+        
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300,700,100,400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,500' rel='stylesheet' type='text/css'>
 
+    <script src="js/jquery.js"></script>
+    <!--
+    <script>
+        
+    </script>
+-->
+    <script src="js/video.js"></script>
+    <script src="js/videoInit.js"></script>
+    <script src="js/main.js"></script> 
+    <script>
+        function submitComment(posX){
+            var picture = "../img/avatar.jpg";
+            var name = "Eleanor";
+            var time2 = $(".vjs-current-time-display").text();
+            var totalTime = $(".vjs-duration-display").text();
+            
+            var ratio = parseInt(time2.substring(time2.length - 2, time2.length - 0), 10) / parseInt(totalTime.substring(totalTime.length - 2, totalTime.length - 0), 10) * 75;
+            
+            console.log("huhu: ",ratio);
+            console.log(totalTime);
+                var content = $("#input-comment").val();
+                var comment = '<div class="headline"><div class="head-container clearfix"><img src="'+picture+'" alt=""><div class="headline-title"><h2>'+name+'</h2><h3>'+time2 +'</h3></div></div><div class="comment">'+content+'</div></div>';
+                    console.log("on send button");
+
+                    console.log("SEND COMMENT");
+                    var numItems = 0;
+                    var target = $(".comment-menu").find(".hid");
+                   // console.log("target: ", target);
+                    //alert(content);
+
+                    $(".comments-block").append(comment);
+                    //$(target).removeClass("hid");
+                    //$(target).addClass("open");
+            
+            
+                     /* ADD CIRCLE ON TIMELINE */
+            var randColor = '#'+'0123456789abcdef'.split('').map(function(v,i,a){
+  return i>5 ? null : a[Math.floor(Math.random()*16)] }).join('');
+                    var nodes = $(".custom-node");
+                    var items = $(nodes).find(".circle");
+                    $(items).each(function(i){
+                        numItems++;
+                    });
+            
+                    var item = '<div id="circle-'+numItems+1+'" class="circle" style="background: '+randColor+'; left: '+ratio+'%;"></div><div class="circle-profile" style="left: '+ratio+'%;"><img src="'+picture+'" alt=""><h2>'+name+'</h2><p>'+content+'</p></div>';
+                    nodes.append(item);
+                    
+                    $("#circle-"+numItems+1).bind("mouseenter mouseleave", function(e){
+                        $(this).toggleClass("tooltip-transition");
+                    });
+                }
+    </script>
+    <!--<script src="js/videoInit.js"></script> -->
+    
+
+    <!--<script src="js/vendor/modernizr-2.6.2.min.js"></script>-->
+    
+    <style>
+        /* VIDEO */
+        .video-js {padding-top: 56.25%}
+        .lol {
+            padding-top: 0px;
+            /*width: 80%;
+            max-width: 640px;*/
+        }
+    </style>
+        
 	</head>
 
 	<body>
@@ -25,9 +104,28 @@
 
 			</div>
 		</div>
-		<video>
-
-		</video>
+		<main id="main" class="main">
+            <div class="main-wrapper">
+         
+                        <div id="myvideo_videojs1" class="video-js vjs-default-skin vjs-playing lol">
+                            <!--<div class="custom-node"></div>-->
+                               <video id="video_1" class="video-js vjs-default-skin" controls preload="none" width="auto" height="auto"
+                  poster="http://video-js.zencoder.com/oceans-clip.png"
+                  data-setup="{}">
+                <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+                <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
+                <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+                
+                <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+                                   
+                            </video>
+                        </div>
+                
+            </div> 
+            <div class="comments-block">
+                    
+            </div>
+        </main>    
 		<!-- <div href="#" id="button"  onclick="toggle()">GIF it</div> -->
 		<img src="../img/gif-it.png" id="gifIt" onclick="toggle()">
 		<footer>
